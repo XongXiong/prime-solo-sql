@@ -23,5 +23,4 @@ SELECT * FROM "syntax_practice" WHERE "account_balance" > '100.00';
 INSERT INTO syntax_practice (username, city, transactions_completed, transactions_attempted, account_balance) VALUES ('Xong', 'Saint Paul', 20, 25, 999999.99);
 
 --9. The bank is losing money in Miami and Phoenix and needs to unload low transaction customers: Delete users that reside in miami OR phoenix and have completed fewer than 5 transactions.
-DELETE FROM "syntax_practice" WHERE "city" = 'miami' AND "transactions_completed" < 5;
-DELETE FROM "syntax_practice" WHERE "city" = 'phoenix' AND "transactions_completed" < 5;
+DELETE FROM "syntax_practice" WHERE "transactions_completed" < 5 AND("city" = 'miami' OR "city" = 'phoenix');
